@@ -1,0 +1,30 @@
+REPARADOR DE HIPERVINCULOS - LIBRO DE GOBIERNO
+
+ARCHIVOS
+- reparador_hipervinculos_gui.py: programa con interfaz grafica.
+- COMPILAR_EXE_WINDOWS.bat: compila el programa a .exe.
+
+IMPORTANTE SOBRE WINDOWS 7
+Las capturas parecen mostrar Windows 7. Para generar un ejecutable compatible, compila en una PC Windows 7 usando Python 3.8.10 y PyInstaller 5.13.2. Usa Python de 32 o 64 bits segun la arquitectura del Windows. Python 3.8.10 fue la ultima version de Python 3.8 para Windows 7.
+Si la computadora de destino es Windows 10/11, compila en Windows 10/11 con una version actual de Python y PyInstaller; no uses el BAT de Windows 7 sin adaptar las versiones.
+
+COMO GENERAR EL EXE
+1. Instala Python 3.8.10 en la PC Windows 7. Durante la instalacion marca "Add Python to PATH".
+2. Coloca los archivos .py y .bat en la misma carpeta.
+3. Haz doble clic en COMPILAR_EXE_WINDOWS.bat.
+4. El ejecutable quedara en la carpeta dist: Reparador_Hipervinculos.exe.
+5. Copia ese .exe a la computadora donde se usara. La computadora de destino no necesita Python ni openpyxl instalados.
+
+USO
+1. Conserva la estructura actual: el Excel en la carpeta principal y las subcarpetas de documentos debajo.
+2. Cierra Excel.
+3. Ejecuta Reparador_Hipervinculos.exe.
+4. Selecciona el archivo .xlsx.
+5. El programa creara un archivo _REPARADO.xlsx y un reporte _REPORTE.csv junto al Excel.
+
+LIMITACIONES Y PRECAUCIONES
+- El programa busca PDF. Las rutas deben estar escritas en las celdas como en los ejemplos compartidos.
+- Si hay varios PDF con el mismo nombre, no elige uno: lo reporta como duplicado.
+- No sobrescribe el Excel original.
+- openpyxl puede no conservar algunos componentes avanzados de ciertos libros (por ejemplo, controles, conexiones o caracteristicas especiales). Haz una copia de respaldo y valida formatos, formulas, hojas y funciones del libro reparado antes de usarlo oficialmente.
+- Primero prueba con una copia del libro y verifica algunos hipervinculos manualmente.
